@@ -15,6 +15,7 @@ namespace Calculator_Tester
         }
 
         [Test]
+        [TestCase()]
         public void TestSomma()
         {
             float num1 = 5.5f;
@@ -25,18 +26,18 @@ namespace Calculator_Tester
             float result = calculator.Somma(num1, num2);
 
             
-            Assert.That(result, Is.EqualTo(expectedResult).Within(0.001f), "La somma non è corretta.");
+            Assert.That(result, Is.EqualTo(expectedResult), "La somma non è corretta.");
         }
         [Test]
         public void TestSottrazione()
         {
             float num1 = 82.0f;
-            float num2 = 3.5f;
-            float expectedResult = 4.5f;
+            float num2 = 3.0f;
+            float expectedResult = 79.0f;
 
             float result = calculator.Sottrazione(num1, num2);
 
-            Assert.That(result, Is.EqualTo(expectedResult).Within(0.001f), "La sottrazione non è corretta.");
+            Assert.That(result, Is.EqualTo(expectedResult), "La sottrazione non è corretta.");
         }
 
         [Test]
@@ -48,7 +49,7 @@ namespace Calculator_Tester
 
             float result = calculator.Divisione(num1, num2);
 
-            Assert.That(result, Is.EqualTo(expectedResult).Within(0.001f), "La divisione non è corretta.");
+            Assert.That(result, Is.EqualTo(expectedResult), "La divisione non è corretta.");
         }
 
         [Test]
@@ -60,7 +61,7 @@ namespace Calculator_Tester
 
             float result = calculator.Moltiplicazione(num1, num2);
 
-            Assert.That(result, Is.EqualTo(expectedResult).Within(0.001f), "La moltiplicazione non è corretta.");
+            Assert.That(result, Is.EqualTo(expectedResult), "La moltiplicazione non è corretta.");
         }
     }
 }
